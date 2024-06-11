@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: k8s-dns-jnnvxty1.hcp.eastus.azmk8s.io
+    http:
+      paths:
+      - path: /ramadan
+        pathType: Prefix
+        backend:
+          service:
+            name: ramadan
+            port:
+              number: 80
+      - path: /prayertime
+        pathType: Prefix
+        backend:
+          service:
+            name: prayertime
+            port:
+              number: 8098
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: api-gateway
+            port:
+              number: 80

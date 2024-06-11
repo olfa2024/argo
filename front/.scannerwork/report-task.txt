@@ -1,0 +1,6 @@
+projectKey=microservice_ramadan
+serverUrl=http://localhost:9000
+serverVersion=10.4.1.88267
+dashboardUrl=http://localhost:9000/dashboard?id=microservice_ramadan
+ceTaskId=e7e4a2f7-8832-47e3-bbca-580f98f69221
+ceTaskUrl=http://localhost:9000/api/ce/task?id=e7e4a2f7-8832-47e3-bbca-580f98f69221
